@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${titulo}"></title>
+    <style>
+        body {
+            font-family: 'Indie Flower', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #fde7e7; 
+            color: #333; 
+        }
+
+        header { 
+            background-color: #f76d57; 
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #f76d57; 
+            font-size: 1.8em;
+        }
+
+        main {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main::before {
+            content: "";
+            background-image: url('https://thumbs.dreamstime.com/b/abstract-information-technology-modern-background-php-code-blue-editor-web-network-internet-telecommunication-software-268157361.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.5; 
+            z-index: -1;
+        }
+
+        div {
+            flex: 0 1 45%; 
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #f76d57; 
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <h1 th:text="${titulo}">Valeria</h1>
+    </header>
+    <main>
+        <h2 th:text="${subtitulo}">Subtítulo por defecto</h2>
+        <div th:text="${contenido}">Contenido por defecto</div>
+    </main>
+</body>
+</html>
